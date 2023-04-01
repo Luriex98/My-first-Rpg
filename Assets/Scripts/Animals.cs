@@ -37,7 +37,8 @@ public class Animals : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.position);
         
         // playerInSight = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        
+        // need to learn this.
+
         playerInSight = distance < sightRange ? true : false;
         Debug.Log(distance);
 
@@ -56,6 +57,8 @@ public class Animals : MonoBehaviour
         {
             _state = State.Scared;
         }
+
+        // switch color when on states
 
         switch (_state)
         {
